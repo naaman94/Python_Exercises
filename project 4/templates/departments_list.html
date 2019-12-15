@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="2">
+      <tr>
+        <th>Department ID</th>
+        <th>Department Name</th>
+        <th>Department Location ID</th>
+        <th>Department Info</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>
+          <form action="/viewEmployees" method="POST">
+            <input type="hidden" name="department_id" value="{{i[0]}}" />
+            <input type="submit" value="..." />
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <p><a href="/">Back</a></p>
+  </body>
+</html>

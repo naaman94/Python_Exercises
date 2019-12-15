@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Add Employee</title>
+</head>
+
+<body>
+  <h1>Add Employee</h1>
+  <form action="/saveEmployees" method="POST">
+    <div>
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" />
+    </div>
+    <div>
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" name="email" />
+    </div>
+    <div>
+      <label for="phone_number">Phone Number</label>
+      <input type="text" name="phone_number" />
+    </div>
+    <div>
+      <label for="job_id">Job ID</label>
+      <input type="text" name="job_id" />
+    </div>
+    <div>
+      <label for="salary">Salary</label>
+      <input type="text" name="salary" />
+    </div>
+    <div>
+      <label for="hire_date">Hire Date</label>
+      <input type="text" name="hire_date" />
+    </div>
+    <div>
+      <label for="department_id">Department ID</label>
+      <input type="text" name="department_id" value="{{department_id}}" />
+    </div>
+    <input type="submit" value="add new" />
+  </form>
+</body>
+
+</html>
